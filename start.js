@@ -1,13 +1,13 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-// mongoose.connect(process.env.DATABASE, {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true
-// });
+mongoose.connect(process.env.DATABASE, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
-var MONGO_URI = "mongodb+srv://cluster0.tynbf.mongodb.net/choice2"
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+// var MONGO_URI = "mongodb+srv://cluster0.tynbf.mongodb.net/choice2"
+// mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 mongoose.connection
   .on('open', () => {
