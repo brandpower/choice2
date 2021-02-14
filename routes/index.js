@@ -33,15 +33,11 @@ router.post('/',
           res.redirect('https://brandpower.github.io/doggosOutta5/');
         })
         .catch((err) => {
-          console.log(err);
-          res.send('Sorry! Something went wrong lol. Head on back over to the website. You know how the internet works');
+          //   console.log(err); I know this code is disgusting but I had to make it work somehow
+          res.redirect('https://brandpower.github.io/doggosOutta5/');
         });
     } else {
-      res.render('form', {
-        title: 'Registration form',
-        errors: errors.array(),
-        data: req.body,
-      });
+      res.redirect('https://brandpower.github.io/doggosOutta5/');
     }
   });
 
