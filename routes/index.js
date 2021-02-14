@@ -30,7 +30,7 @@ router.post('/',
       const registration = new Registration(req.body);
       registration.save()
         .then(() => {
-          res.send('Well done');
+          res.redirect('https://brandpower.github.io/doggosOutta5/');
         })
         .catch((err) => {
           console.log(err);
