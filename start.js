@@ -6,7 +6,6 @@ mongoose.connect(process.env.DATABASE, {
   useUnifiedTopology: true
 });
 
-
 // mongoose.connect(process.env.MONGODB_URI);
 
 
@@ -20,6 +19,7 @@ mongoose.connection
 
 require('./models/Registration');
 const app = require('./app');
+const { path } = require('./app');
 
 const server = app.listen(3000, () => {
   console.log(`Express is running on port ${server.address().port}`);
