@@ -1,9 +1,11 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/choice2', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
 });
 
 // var MONGO_URI = "mongodb+srv://cluster0.tynbf.mongodb.net/choice2"
